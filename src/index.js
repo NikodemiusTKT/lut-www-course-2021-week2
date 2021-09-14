@@ -1,5 +1,5 @@
-import "./styles.css";
-document.getElementById("app").innerHTML = `
+import './styles.css';
+document.getElementById('app').innerHTML = `
 <div>
   <h2>Meal table</h2>
 <table>
@@ -63,23 +63,19 @@ document.getElementById("app").innerHTML = `
 </div>
 `;
 
-
-document.getElementById("add-comment").onclick = () => {
-  var comment = document.getElementById("comment-text");
-  var ul = document.getElementById("comment-list");
+document.getElementById('add-comment').onclick = () => {
+  var comment = document.getElementById('comment-text');
+  var ul = document.getElementById('comment-list');
   var commentText = comment.value;
-  if (commentText === "") return;
-  var li = document.createElement("li");
+  var li = document.createElement('li');
   li.appendChild(document.createTextNode(commentText));
   ul.appendChild(li);
-  comment.value = "";
+  comment.value = '';
 };
-document.getElementById("remove-comments").onclick = () => {
-  var doRemoveComments = window.confirm(
-    "Are you sure you want to remove comments?"
-  );
+document.getElementById('remove-comments').onclick = () => {
+  var doRemoveComments = window.confirm('Are you sure you want to remove comments?');
   if (doRemoveComments) {
-    document.getElementById("comment-list").innerHTML = "";
+    document.getElementById('comment-list').innerHTML = '';
   } else {
     return;
   }
