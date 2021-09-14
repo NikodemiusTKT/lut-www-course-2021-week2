@@ -52,13 +52,11 @@ document.getElementById("app").innerHTML = `
 					</td>
 			</tr>
 	</tbody>
-    
+
 	</table>
 	<h2>Comments</h3>
 	<ul id="comment-list">
 	</ul>
-	
-	
 	<textarea id="comment-text"></textarea>
 	<br>
 	<button id="add-comment" >Add Comment</button>
