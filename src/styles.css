@@ -8,6 +8,7 @@ body {
 #menu-table {
   text-align: left;
   background-color: #f2f2f2;
+  width: 100%;
 }
 #menu-table tr:nth-child(2n-2) {
   background-color: gainsboro;
@@ -15,4 +16,10 @@ body {
 #menu-table th {
   background-color: rgb(160, 160, 160);
   padding: 5px 0 5px 0;
+}
+
+div.menu-layout {
+  text-align: center;
+  max-width: 740px;
+  margin: auto;
 }
