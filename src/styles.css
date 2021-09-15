@@ -9,3 +9,6 @@ body {
   text-align: left;
   background-color: #f2f2f2;
 }
+#menu-table tr:nth-child(2n-2) {
+  background-color: gainsboro;
+}
