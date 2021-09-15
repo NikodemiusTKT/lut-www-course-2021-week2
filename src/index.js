@@ -1,19 +1,51 @@
 import './styles.css';
-
 document.getElementById('add-comment').onclick = () => {
-  var comment = document.getElementById('comment-text');
-  var ul = document.getElementById('comment-list');
-  var commentText = comment.value;
-  var li = document.createElement('li');
-  li.appendChild(document.createTextNode(commentText));
-  ul.appendChild(li);
+  var commentText = document.getElementById('text');
+  var ratingValue = document.getElementById('select-rating');
+  var commentArea = document.getElementById('comment-area');
+  var ratingTemplate = buildRatingStars(ratingValue.value);
+  var template = `
+			<div class="comment-rating">
+				${ratingTemplate}
+			</div>
+			<div class="comment-text">${commentText.value}</div>
+		`;
+  var div = document.createElement('div');
+  div.classList.add('comment');
+  div.innerHTML = template;
+  let button = document.createElement('button');
+  button.className = 'remove-button';
+  button.onclick = () => {
+    div.parentNode.removeChild(div);
+  };
+  button.innerText = 'Remove';
+  button.style.visibility = 'hidden';
+  div.appendChild(button);
+
+  commentArea.appendChild(div);
   comment.value = '';
 };
 document.getElementById('remove-comments').onclick = () => {
-  var doRemoveComments = window.confirm('Are you sure you want to remove comments?');
-  if (doRemoveComments) {
-    document.getElementById('comment-list').innerHTML = '';
-  } else {
-    return;
+  var buttons = document.querySelectorAll('.remove-button');
+  for (let index = 0; index < buttons.length; index++) {
+    buttons[index].style.visibility = 'visible';
   }
 };
+function buildRatingStars(rating) {
+  var ratingTemplate = ``;
+  let stars = 4;
+  for (let index = 0; index < rating; index++) {
+    ratingTemplate += `<span class="fa fa-star checked"></span>`;
+    stars -= 1;
+  }
+  for (let index = 0; index < stars; index++) {
+    ratingTemplate += `<span class="fa fa-star"></span>`;
+  }
+  return ratingTemplate;
+}
+// function removeComment(event) {
+//   var dom = this;
+//   var p_dom = this.parentNode;
+//   var parent_node = p_dom.parentNode;
+//   parent_node.removeChild(p_dom);
+// }

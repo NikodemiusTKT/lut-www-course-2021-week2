@@ -25,23 +25,24 @@ thead > tr > th {
 }
 .comment {
   display: flex;
-  justify-content: center;
   margin-top: 0;
   margin-bottom: 20px;
 }
 .comment-rating {
   display: inline-flex;
   align-self: top;
+  width: 10%;
 }
 .comment-text {
   display: inline-flex;
   text-align: justify;
   padding-left: 20px;
   padding-right: 20px;
+  width: 70%;
 }
 .remove-button {
-  display: inline-flex;
   height: 20px;
+  width: 20%;
   align-self: top;
 }
 .input-area {
