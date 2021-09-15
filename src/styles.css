@@ -12,6 +12,7 @@ body {
 #menu-table tr:nth-child(2n-2) {
   background-color: gainsboro;
 }
-#menu-table thead {
-  background-color: rgb(138, 163, 163);
+#menu-table th {
+  background-color: rgb(160, 160, 160);
+  padding: 5px 0 5px 0;
 }
