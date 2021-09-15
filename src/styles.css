@@ -13,7 +13,7 @@ body {
 #menu-table tr:nth-child(2n) {
   background-color: gainsboro;
 }
-#menu-table th > tr {
+thead > tr > th {
   background-color: rgba(0, 0, 0, 0);
   padding: 5px 0 5px 0;
 }
