@@ -23,3 +23,41 @@ thead > tr > th {
   max-width: 740px;
   margin: auto;
 }
+.comment {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.comment-rating {
+  display: inline-flex;
+  align-self: top;
+}
+.comment-text {
+  display: inline-flex;
+  text-align: justify;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.remove-button {
+  display: inline-flex;
+  height: 20px;
+  align-self: top;
+}
+.input-area {
+  display: flex;
+}
+textarea {
+  width: 100%;
+  height: 100px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.select-rating {
+  display: inline-flex;
+  height: 20px;
+}
+
+.checked {
+  color: orange;
+}
