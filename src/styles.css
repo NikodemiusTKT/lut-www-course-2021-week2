@@ -5,3 +5,6 @@ body {
 .header {
   font-style: italic;
 }
+#menu-table {
+  text-align: left;
+}
