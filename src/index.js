@@ -14,7 +14,7 @@ document.getElementById('add-comment').onclick = () => {
   div.classList.add('comment');
   div.innerHTML = template;
   let button = document.createElement('button');
-  button.className = 'remove-button';
+  button.className = 'remove-comment';
   button.onclick = () => {
     div.parentNode.removeChild(div);
   };
@@ -26,7 +26,7 @@ document.getElementById('add-comment').onclick = () => {
   commentText.value = '';
 };
 document.getElementById('remove-comments').onclick = () => {
-  var buttons = document.getElementsByClassName('remove-button');
+  var buttons = document.getElementsByClassName('remove-comment');
   for (let index = 0; index < buttons.length; index++) {
     buttons[index].style.visibility = 'visible';
   }
