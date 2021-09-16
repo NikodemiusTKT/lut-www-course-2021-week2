@@ -3,9 +3,15 @@ document.getElementById('add-comment').onclick = () => {
   var commentText = document.getElementById('comment-input');
   var rating = document.getElementById('select-rating');
   var commentList = document.getElementById('comment-list');
+  var ratingTemplate = ``;
+  // add stars to the template equal to the rating value
+  for (let index = 0; index < rating.value; index++) {
+    ratingTemplate += '★';
+  }
+
   var template = `
 			<div class="comment-rating">
-				${rating.value}
+				${ratingTemplate}
 			</div>
 			<div class="comment-text">${commentText.value}</div>
 
