@@ -26,28 +26,28 @@ tr {
 }
 .comment {
   display: flex;
+  flex-direction: row;
+  width: 100%;
   margin-top: 0;
   margin-bottom: 20px;
 }
 .comment-rating {
-  display: inline-flex;
-  align-self: top;
-  width: 10%;
+  margin-right: 10px;
+  width: 80px;
 }
 .comment-text {
-  display: inline-flex;
   text-align: justify;
-  padding-left: 20px;
   padding-right: 20px;
-  width: 70%;
+  margin-left: 20px;
+  width: 100%;
 }
-.remove-button {
+.remove-comment {
   height: 20px;
-  width: 20%;
-  align-self: top;
+  margin-left: auto;
 }
 .input-area {
   display: flex;
+  flex-direction: row;
 }
 textarea {
   width: 100%;
@@ -56,10 +56,7 @@ textarea {
   margin-bottom: 20px;
 }
 .select-rating {
-  display: inline-flex;
   height: 20px;
-}
-
-.checked {
-  color: orange;
+  text-align: left;
+  width: 80px;
 }
