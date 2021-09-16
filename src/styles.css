@@ -5,7 +5,7 @@ body {
 .header {
   font-style: italic;
 }
-#menu-layout {
+.menu-layout {
   text-align: center;
   margin: auto;
   max-width: 740px;
@@ -18,7 +18,8 @@ body {
   background-color: rgb(220, 220, 220);
 }
 #menu-table thead > tr > th {
-  background-color: gainsboro;
+  background-color: darkgrey;
+  padding: 2px 0 2px 0;
 }
 .comment {
   display: flex;
