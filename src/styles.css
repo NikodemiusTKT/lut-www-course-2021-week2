@@ -10,7 +10,7 @@ body {
   margin: auto;
   max-width: 740px;
 }
-#menu-table {
+#menu-table tr {
   background-color: #f2f2f2;
   width: 100%;
 }
