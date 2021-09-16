@@ -1,8 +1,8 @@
 import './styles.css';
 document.getElementById('add-comment').onclick = () => {
-  var commentText = document.getElementById('text');
+  var commentText = document.getElementById('comment-input');
   var ratingValue = document.getElementById('select-rating');
-  var commentArea = document.getElementById('comment-area');
+  var commentList = document.getElementById('comment-list');
   var ratingTemplate = buildRatingStars(ratingValue.value);
   var template = `
 			<div class="comment-rating">
@@ -22,11 +22,11 @@ document.getElementById('add-comment').onclick = () => {
   button.style.visibility = 'hidden';
   div.appendChild(button);
 
-  commentArea.appendChild(div);
-  comment.value = '';
+  commentList.appendChild(div);
+  commentText.value = '';
 };
 document.getElementById('remove-comments').onclick = () => {
-  var buttons = document.querySelectorAll('.remove-button');
+  var buttons = document.getElementsByClassName('remove-button');
   for (let index = 0; index < buttons.length; index++) {
     buttons[index].style.visibility = 'visible';
   }
