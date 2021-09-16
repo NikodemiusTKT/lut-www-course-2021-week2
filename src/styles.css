@@ -11,7 +11,7 @@ tr {
   background-color: #f2f2f2;
   width: 100%;
 }
-#menu-table tr:nth-child(2n - 2) {
+#menu-table tr:nth-child(2n) {
   background-color: rgb(220, 220, 220);
 }
 #menu-table thead > tr > th {
